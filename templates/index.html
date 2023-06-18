@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <title>InstaCutter</title>
+</head>
+<body>
+    
+    <!-- 
+        Structre of the page:
+            header
+            - Welcome section
+            - Upload section
+            - Usage section
+            footer
+        
+     -->
+     
+         <header>
+             <img src="./static/ico/icon.png" alt="InstaCutter">
+             <h6>InstaCutter</h6>   
+         </header>
+
+     <div class="container">
+
+        
+            <div class="fsection">
+                <h1 class="item-1">Cut your videos to make them suitable
+                     <br>and usable for your Instagram 
+                     stories or reels</h1>
+                <div class="cardVideo">
+                    <img src="./static/gif/vidoe.gif" alt="intro">
+                </div>
+            </div>
+
+            <div class="ssection">
+                <div class="card">
+                    <div class="rect">
+
+                        <form method="POST" enctype="multipart/form-data" action="/">
+                            <label for="videoUpload" class="btn-upload">Upload Video</label>
+                            <input name="selected_file" type="file" id="videoUpload" accept="video/*" style="display:none;">
+                            <input type="submit" value="Submit" class="submit">
+                            <select name="options" class="list">
+                                <option value="15">15sec for each part</option>
+                                <option value="30">30sec for each part</option>
+                                <option value="45">45sec for each part</option>
+                                <option value="60">60sec for each part</option>
+                            </select>
+                        </form>
+                       
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <footer class="th3dsection">
+                
+                <div class="links">
+
+                    
+                        <a href="info.instacutter@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://instagram.com/jadallahcode?igshid=ZDdkNTZiNTM="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@developerx2?source=msft&lang=en"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://linktr.ee/developerx"><i class="fas fa-link"></i></a>
+                    
+
+                </div>
+                <p class="rights">&copy; 2023 InstaCutter. All rights reserved.</p>
+            </footer>
+
+
+    </div>
+
+</body>
+</html>
